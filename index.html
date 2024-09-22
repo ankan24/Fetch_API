@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.0/sweetalert.min.js"></script>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retry Logic</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+        }
+
+        h1 {
+            color: #333;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        /* Buttons styling */
+        input[type="submit"] {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        input[type="submit"]:active {
+            background-color: #004080;
+        }
+
+        /* Results container styling */
+        div {
+            width: 100%;
+            max-width: 600px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+            border: 1px solid #ddd;
+        }
+
+        /* Styling for each fetched result */
+        div p {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.05);
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            word-wrap: break-word; /* Ensures long text is wrapped */
+        }
+
+        div p:hover {
+            background-color: #f0f0f0;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            input[type="submit"] {
+                width: 100%;
+                margin: 5px 0;
+            }
+
+            div {
+                max-width: 100%;
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+    <input type="submit" id="f1" value="Fetch 1">
+    <input type="submit" id="f2" value="Fetch 2">
+    <input type="submit" id="f3" value="Fetch 3">
+</body>
+<script src="script.js"></script>
+</html> 
